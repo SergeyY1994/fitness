@@ -1,4 +1,5 @@
 .main-block {
+  position: relative;
   color: $color-default-white;
   background-image: $main-block-bg;
 
@@ -38,7 +39,7 @@
 
   @include vp-1199 {
     width: 52.2%;
-    grid-template-columns: 30% 61%;
+    grid-template-columns: 32% 60%;
   }
 
   @include vp-767 {
@@ -111,7 +112,7 @@
   @include vp-1199 {
     margin-top: 51px;
     margin-bottom: 5px;
-    margin-right: 6px;
+    margin-right: 3px;
     font-size: 34px;
     line-height: 41px;
   }
