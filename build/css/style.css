@@ -930,7 +930,7 @@ button,
   gap: 0 78px;
   width: 1180px;
   max-width: 100%;
-  padding: 120px 11px 235px 70px;
+  padding: 120px 11px 7px 70px;
 }
 
 .gym__text-wrapper p {
@@ -1028,6 +1028,240 @@ button,
 
 .gym__video-button[data-is-js=true] {
   display: block;
+}
+
+.subscription {
+  background-color: #f8f9fc;
+  background-image: url("../img/weight-plates@1x.png"), -webkit-gradient(linear, left top, left bottom, color-stop(90%, #f8f9fc), color-stop(90%, #ffffff));
+  background-image: url("../img/weight-plates@1x.png"), -o-linear-gradient(top, #f8f9fc 90%, #ffffff 90%);
+  background-image: url("../img/weight-plates@1x.png"), linear-gradient(180deg, #f8f9fc 90%, #ffffff 90%);
+  background-repeat: no-repeat;
+  background-position: 117% 113%;
+}
+
+@supports (background-image: url("../img/weight-plates@1x.webp")) {
+  .subscription {
+    background-image: url("../img/weight-plates@1x.webp"), -webkit-gradient(linear, left top, left bottom, color-stop(90%, #f8f9fc), color-stop(90%, #ffffff));
+    background-image: url("../img/weight-plates@1x.webp"), -o-linear-gradient(top, #f8f9fc 90%, #ffffff 90%);
+    background-image: url("../img/weight-plates@1x.webp"), linear-gradient(180deg, #f8f9fc 90%, #ffffff 90%);
+  }
+}
+
+.subscription__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1180px;
+  max-width: 100%;
+  padding-top: 122px;
+  padding-bottom: 169px;
+}
+
+.subscription__title {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: #102654;
+}
+
+.subscription__tabs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 29.3%;
+  margin-bottom: 29px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.subscription__tab-button {
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(16, 38, 84, 0.5019607843);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.subscription__tab-button--active {
+  color: #102654;
+  border-bottom: 2px solid #d10a42;
+}
+
+.subscription__list {
+  width: 100%;
+  display: none;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 40px;
+  padding-left: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  list-style-type: none;
+}
+
+.subscription__list--active {
+  display: -ms-grid;
+  display: grid;
+}
+
+.subscription__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 360px;
+  padding: 62px 70px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  background-color: #ffffff;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.subscription__card:hover,
+.subscription__card:focus-within {
+  -o-border-image: -o-linear-gradient(301.18deg, #d10a42 0.85%, #00359f 100%);
+  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+  border-image-slice: 1;
+}
+
+.subscription__card-title {
+  margin: 0;
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+}
+
+.subscription__card-text {
+  margin-bottom: 65px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #495a7d;
+}
+
+.subscription__card-price {
+  position: relative;
+  margin-bottom: 34px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #103aae;
+  z-index: 1;
+}
+
+.subscription__card-price::before {
+  z-index: -1;
+  position: absolute;
+  top: -53px;
+  left: -18px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 150px;
+  color: #e8e8e8;
+  opacity: 0.48;
+}
+
+.subscription__card-price--1::before {
+  content: "5000";
+}
+
+.subscription__card-price--2::before {
+  content: "1700";
+}
+
+.subscription__card-price--3::before {
+  content: "2700";
+}
+
+.subscription__card-price--4::before {
+  content: "29000";
+}
+
+.subscription__card-price--5::before {
+  content: "9000";
+}
+
+.subscription__card-price--6::before {
+  content: "15000";
+}
+
+.subscription__card-price--7::before {
+  content: "45000";
+}
+
+.subscription__card-price--8::before {
+  content: "17000";
+}
+
+.subscription__card-price--9::before {
+  content: "29000";
+}
+
+.subscription__rouble {
+  color: #102654;
+}
+
+.subscription__card-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 24px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #102654;
+  background-color: transparent;
+  border: 2px solid #102654;
+}
+
+.subscription__card-link.focus-visible:focus {
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  border: none;
+  outline: none;
+  opacity: 1;
 }
 
 /* @mixin hover-focus {
@@ -1211,6 +1445,48 @@ button,
     width: 27%;
     height: 44%;
   }
+
+  .subscription {
+    background-image: url("../img/weight-plates@1x.png"), -webkit-gradient(linear, left top, left bottom, color-stop(90%, #f8f9fc), color-stop(90%, #ffffff));
+    background-image: url("../img/weight-plates@1x.png"), -o-linear-gradient(#f8f9fc 90%, #ffffff 90%);
+    background-image: url("../img/weight-plates@1x.png"), linear-gradient(#f8f9fc 90%, #ffffff 90%);
+    background-size: 407px 442px;
+    background-position: 116% 101%;
+  }
+
+  .subscription__container {
+    padding-top: 100px;
+    padding-bottom: 169px;
+  }
+
+  .subscription__title {
+    margin-left: -14px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .subscription__tabs-container {
+    width: 49%;
+    margin-bottom: 46px;
+  }
+
+  .subscription__tab-button {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .subscription__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px 0;
+  }
+
+  .subscription__card {
+    width: 100%;
+    max-width: 442px;
+    padding: 55px 110px 60px;
+  }
 }
 
 @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
@@ -1369,6 +1645,67 @@ button,
     left: 39%;
     width: 23%;
   }
+
+  .subscription {
+    background-image: none;
+  }
+
+  .subscription__container {
+    padding-top: 63px;
+    padding-bottom: 33px;
+  }
+
+  .subscription__title {
+    margin-left: -9px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .subscription__tabs-container {
+    width: 100%;
+    margin-bottom: 33px;
+  }
+
+  .subscription__tab-button {
+    padding-bottom: 14px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .subscription__list {
+    gap: 35px 0;
+  }
+
+  .subscription__card {
+    max-width: 100%;
+    padding: 42px 34px 46px;
+  }
+
+  .subscription__card-title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .subscription__card-text {
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .subscription__card-price {
+    margin-left: 9px;
+    margin-bottom: 30px;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .subscription__card-price::before {
+    top: -46px;
+    left: -18px;
+    font-size: 80px;
+    line-height: 120px;
+  }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
@@ -1409,6 +1746,14 @@ button,
   .gym__video-button:hover:not(.focus-visible) {
     opacity: 0.8;
   }
+
+  .subscription__card-link:hover:not(.focus-visible) {
+    background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    border: none;
+    outline: none;
+    opacity: 1;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -1423,6 +1768,20 @@ button,
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 54, 122, 0.5))), url("../img/gym-video-preview@2x.webp");
       background-image: -o-linear-gradient(rgba(20, 54, 122, 0.5)), url("../img/gym-video-preview@2x.webp");
       background-image: linear-gradient(rgba(20, 54, 122, 0.5)), url("../img/gym-video-preview@2x.webp");
+    }
+}
+
+  .subscription {
+    background-image: url("../img/weight-plates@2x.png"), -webkit-gradient(linear, left top, left bottom, color-stop(90%, #f8f9fc), color-stop(90%, #ffffff));
+    background-image: url("../img/weight-plates@2x.png"), -o-linear-gradient(top, #f8f9fc 90%, #ffffff 90%);
+    background-image: url("../img/weight-plates@2x.png"), linear-gradient(180deg, #f8f9fc 90%, #ffffff 90%);
+  }
+
+@supports (background-image: url("../img/weight-plates@2x.webp")) {
+    .subscription {
+      background-image: url("../img/weight-plates@2x.webp"), -webkit-gradient(linear, left top, left bottom, color-stop(90%, #f8f9fc), color-stop(90%, #ffffff));
+      background-image: url("../img/weight-plates@2x.webp"), -o-linear-gradient(top, #f8f9fc 90%, #ffffff 90%);
+      background-image: url("../img/weight-plates@2x.webp"), linear-gradient(180deg, #f8f9fc 90%, #ffffff 90%);
     }
 }
 }

@@ -1,0 +1,303 @@
+.subscription {
+  background-color: $ghost-white;
+  background-image: url("../img/weight-plates@1x.png"), linear-gradient(180deg, $ghost-white 90%, $color-default-white 90%);
+  background-repeat: no-repeat;
+  background-position: 117% 113%;
+
+  @supports (background-image: url("../img/weight-plates@1x.webp")) {
+    background-image: url("../img/weight-plates@1x.webp"), linear-gradient(180deg, $ghost-white 90%, $color-default-white 90%);
+  }
+
+  @include retina {
+    background-image: url("../img/weight-plates@2x.png"), linear-gradient(180deg, $ghost-white 90%, $color-default-white 90%);
+
+    @supports (background-image: url("../img/weight-plates@2x.webp")) {
+      background-image: url("../img/weight-plates@2x.webp"), linear-gradient(180deg, $ghost-white 90%, $color-default-white 90%);
+    }
+  }
+
+  @include vp-1199 {
+    background-image: url("../img/weight-plates@1x.png"), linear-gradient($ghost-white 90%, $color-default-white 90%);
+    background-size: 407px 442px;
+    background-position: 116% 101%;
+  }
+
+  @include vp-767 {
+    background-image: none;
+  }
+}
+
+.subscription__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1180px;
+  max-width: 100%;
+  padding-top: 122px;
+  padding-bottom: 169px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 169px;
+  }
+
+  @include vp-767 {
+    padding-top: 63px;
+    padding-bottom: 33px;
+  }
+}
+
+.subscription__title {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-family: $ff-alumni-sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: $sapphire;
+
+  @include vp-1199 {
+    margin-left: -14px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin-left: -9px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.subscription__tabs-container {
+  display: flex;
+  justify-content: space-between;
+  width: 29.3%;
+  margin-bottom: 29px;
+  border-bottom: 2px solid $tabs-container-border;
+
+  @include vp-1199 {
+    width: 49%;
+    margin-bottom: 46px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+.subscription__tab-button {
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  font-family: $ff-roboto-condensed;
+  font-size: 20px;
+  line-height: 30px;
+  color: $tab-default-color;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--active {
+    color: $sapphire;
+    border-bottom: 2px solid $crimson;
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 14px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.subscription__list {
+  width: 100%;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 40px;
+  padding-left: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  list-style-type: none;
+
+  &--active {
+    display: grid;
+  }
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px 0;
+  }
+
+  @include vp-767 {
+    gap: 35px 0;
+  }
+}
+
+.subscription__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 360px;
+  padding: 62px 70px;
+  font-family: $ff-roboto-condensed;
+  background-color: $color-default-white;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent;
+
+  @include vp-1199 {
+    width: 100%;
+    max-width: 442px;
+    padding: 55px 110px 60px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    padding: 42px 34px 46px;
+  }
+
+  &:hover,
+  &:focus-within {
+    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+    border-image-slice: 1;
+  }
+}
+
+.subscription__card-title {
+  margin: 0;
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+.subscription__card-text {
+  margin-bottom: 65px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $chambray;
+
+  @include vp-767 {
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.subscription__card-price {
+  position: relative;
+  margin-bottom: 34px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  display: flex;
+  align-items: center;
+  color: $egyptian-blue;
+  z-index: 1;
+
+  @include vp-767 {
+    margin-left: 9px;
+    margin-bottom: 30px;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  &::before {
+    z-index: -1;
+    position: absolute;
+    top: -53px;
+    left: -18px;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 150px;
+    color: $whisper;
+    opacity: 0.48;
+
+    @include vp-767 {
+      top: -46px;
+      left: -18px;
+      font-size: 80px;
+      line-height: 120px;
+    }
+  }
+
+  &--1::before {
+    content: "5000";
+  }
+
+  &--2::before {
+    content: "1700";
+  }
+
+  &--3::before {
+    content: "2700";
+  }
+
+  &--4::before {
+    content: "29000";
+  }
+
+  &--5::before {
+    content: "9000";
+  }
+
+  &--6::before {
+    content: "15000";
+  }
+
+  &--7::before {
+    content: "45000";
+  }
+
+  &--8::before {
+    content: "17000";
+  }
+
+  &--9::before {
+    content: "29000";
+  }
+}
+
+.subscription__rouble {
+  color: $sapphire;
+}
+
+.subscription__card-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 24px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $sapphire;
+  background-color: transparent;
+  border: 2px solid $sapphire;
+
+  @include hover-focus {
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    border: none;
+    outline: none;
+    opacity: 1;
+  }
+}
