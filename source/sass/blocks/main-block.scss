@@ -152,8 +152,11 @@
 .main-block__img-wrapper {
   @include vp-1199 {
     position: relative;
+    // тут эксперимент с адаптацией картинок
     width: 324px;
     height: 390px;
+    // width: 50%;
+    // height: 20vw;
     overflow: hidden;
   }
 

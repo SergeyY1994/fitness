@@ -1,0 +1,279 @@
+.benefits {
+  background-color: $ghost-white;
+  font-family: $ff-roboto-condensed;
+  color: $sapphire;
+}
+
+.benefits__container {
+  width: 1180px;
+  max-width: 100%;
+  padding-top: 149px;
+  padding-bottom: 84px;
+  padding-left: 71px;
+  padding-right: 71px;
+
+  @include vp-1199 {
+    width: 100%;
+    padding-top: 94px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 91px;
+  }
+
+  @include vp-767 {
+    padding: 64px 38px 62px;
+  }
+}
+
+.benefits__title {
+  margin-top: 0;
+  margin-left: 18px;
+  margin-bottom: 47px;
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-left: -20px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin-left: -15px;
+    margin-bottom: 29px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.benefits__list {
+  margin: 0;
+  margin-left: 19px;
+  display: grid;
+  gap: 74px 55px;
+  grid-template-columns: 31.8% 24% 33%;
+  padding-left: 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    margin-left: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 43px 29px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: auto;
+    gap: 17px 0;
+  }
+}
+
+.benefits__item {
+  // проблема с переполнением из-за синего текста
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 0 30px;
+  padding-bottom: 75px;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &:not(:nth-last-child(2), :last-child) {
+    border-bottom: 2px solid #d10a4233;
+
+    @include vp-1199 {
+      border-bottom: none;
+
+      &:not(.benefits__item--decorated) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &:nth-last-child(2) {
+    padding-bottom: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &--decorated {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    padding: 35px 34px 47px;
+    background-color: $resolution-blue;
+    color: $color-default-white;
+    border-bottom: none;
+
+    @include vp-1199 {
+      grid-column: 1 / 3;
+      grid-row: auto;
+      margin-top: 0;
+      margin-bottom: 5px;
+      // паддинг надо в процентах, для боковых, чтобы не переполнялось
+      padding: 29px 119px 37px;
+      background-color: transparent;
+      background-image: linear-gradient(90deg, transparent 17.3%, $resolution-blue 17.3% 82.5%, transparent 82.5%);
+    }
+
+    @include vp-767 {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-top: 25px;
+      margin-bottom: 9px;
+      padding: 20px 40px 45px;
+      grid-column: auto;
+      grid-row: auto;
+      background-color: $resolution-blue;
+      background-image: none;
+    }
+  }
+}
+
+.benefits__text-wrapper {
+  @include vp-1199 {
+    max-width: 50%;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.benefits__text-number {
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 60px;
+  // При 106 выглядит совсем не похоже на макет.
+  // Лучше маленький текст сдвинуть вверх с помощью отрицательного марджина.
+  // line-height не из макета вызывает непредсказуемые проблемы
+  // line-height: 106px;
+  background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
+  color: transparent;
+  background-clip: text;
+
+  @include vp-1199 {
+    font-size: 58px;
+    line-height: 87px;
+  }
+
+  // @include vp-767 {
+
+  // }
+}
+
+.benefits__text-small {
+  font-size: 14px;
+  line-height: 21px;
+  color: $persian-blue;
+
+  @include vp-767 {
+    margin-top: -19px;
+    margin-bottom: 13px;
+  }
+}
+
+.benefits__item-text--decorated-small {
+  font-size: 26px;
+  line-height: 39px;
+  // здесь надо перенос слова
+}
+
+.benefits__item-title {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+
+  @include vp-1199 {
+    margin-top: -6px;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--decorated {
+    margin-top: -15px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 39px;
+
+    @include vp-1199 {
+      margin-top: -24px;
+      margin-bottom: 14px;
+      font-size: 22px;
+      line-height: 33px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.benefits__title-paragraph-wrapper {
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--1 {
+      width: 78%;
+    }
+
+    &--2 {
+      width: 98%;
+    }
+
+    &--3 {
+      width: 96%;
+    }
+  }
+}
+
+.benefits__text-decorated {
+  text-align: center;
+  font-size: 74px;
+  line-height: 111px;
+  font-weight: 700;
+
+  @include vp-1199 {
+    line-height: 78px;
+  }
+
+  @include vp-767 {
+    line-height: 111px;
+  }
+}
+
+.benefits__paragraph {
+  margin: 0;
+
+  // @include vp-767 {
+  // }
+
+  &--decorated {
+    width: 44%;
+    text-align: center;
+
+    @include vp-767 {
+      width: 90%;
+    }
+  }
+}
