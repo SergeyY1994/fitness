@@ -170,10 +170,6 @@
     font-size: 58px;
     line-height: 87px;
   }
-
-  // @include vp-767 {
-
-  // }
 }
 
 .benefits__text-small {
@@ -265,12 +261,12 @@
 .benefits__paragraph {
   margin: 0;
 
-  // @include vp-767 {
-  // }
-
   &--decorated {
-    width: 44%;
     text-align: center;
+
+    @include vp-1199 {
+      width: 44%;
+    }
 
     @include vp-767 {
       width: 90%;
