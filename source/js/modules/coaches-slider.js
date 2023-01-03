@@ -4,6 +4,9 @@ const coachesSlider = document.querySelector('.coaches__swiper');
 let swiper = new Swiper(coachesSlider, {
   direction: 'horizontal',
   loop: true,
+  keyboard: {
+    enabled: true,
+  },
 
   breakpoints: {
     320: {
@@ -21,8 +24,8 @@ let swiper = new Swiper(coachesSlider, {
   },
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.coaches__swiper-button-next',
+    prevEl: '.coaches__swiper-button-prev',
   },
 });
 
