@@ -388,6 +388,47 @@
             </div>
           </div>
         </section>
+        <section class="contacts">
+          <div class="contacts__container container">
+            <div class="contacts__form-section">
+              <h2 class="contacts__form-title">Бесплатное занятие</h2>
+              <form class="contacts__form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="contacts__form-field">
+                  <label class="visually-hidden" for="user-name">Имя</label>
+                  <input type="text" id="user-name" name="user-name" placeholder="Имя" required>
+                </div>
+                <div class="contacts__form-field">
+                  <label class="visually-hidden" for="user-tel">Телефон</label>
+                  <input type="text" id="user-phone" name="user-phone" minlength="11" pattern="^[- +()0-9]+$" placeholder="Телефон" required>
+                </div>
+                <div class="contacts__form-field contacts__form-field--button">
+                  <button type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+            <div class="contacts__contacts-section">
+              <h2 class="contacts__contacts-title">Контакты</h2>
+              <dl class="contacts__list">
+                <div class="contacts__item contacts__item--1">
+                  <dt class="contacts__item-title">Адрес:</dt>
+                  <dd class="contacts__information">г.&nbsp;Омск, ул. 60 лет Октября, 7</dd>
+                </div>
+                <div class="contacts__item contacts__item--2">
+                  <dt class="contacts__item-title">График работы:</dt>
+                  <dd class="contacts__information">Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</dd>
+                </div>
+                <div class="contacts__item contacts__item--3">
+                  <dt class="contacts__item-title">Телефон:</dt>
+                  <dd class="contacts__information"><a class="contacts__link" href="tel:88005555555">8-800-555-55-55</a></dd>
+                </div>
+                <div class="contacts__item contacts__item--4">
+                  <dt class="contacts__item-title">Email:</dt>
+                  <dd class="contacts__information"><a class="contacts__link" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
       </main>
       <footer>
         <div class="container"></div>
