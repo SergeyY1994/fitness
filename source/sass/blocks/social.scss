@@ -1,0 +1,17 @@
+.social__list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 11px;
+  min-height: 25px;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.social__link {
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
