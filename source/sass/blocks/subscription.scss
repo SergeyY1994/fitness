@@ -1,29 +1,39 @@
 .subscription {
+  position: relative;
   background-color: $ghost-white;
-  background-image: url("../img/weight-plates@1x.png"), linear-gradient(180deg, $ghost-white 90%, $color-default-white 90%);
-  background-repeat: no-repeat;
-  background-position: 117% 113%;
 
-  @supports (background-image: url("../img/weight-plates@1x.webp")) {
-    background-image: url("../img/weight-plates@1x.webp"), linear-gradient(180deg, $ghost-white 90%, $color-default-white 90%);
-  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 321px;
+    height: 384px;
+    right: 0;
+    bottom: -82px;
+    background-image: url("../img/weight-plates@1x.png");
+    background-repeat: no-repeat;
+    background-size: 440px 493px;
+    background-position: 35px -42px;
 
-  @include retina {
-    background-image: url("../img/weight-plates@2x.png"), linear-gradient(180deg, $ghost-white 90%, $color-default-white 90%);
-
-    @supports (background-image: url("../img/weight-plates@2x.webp")) {
-      background-image: url("../img/weight-plates@2x.webp"), linear-gradient(180deg, $ghost-white 90%, $color-default-white 90%);
+    @supports (background-image: url("../img/weight-plates@1x.webp")) {
+      background-image: url("../img/weight-plates@1x.webp");
     }
-  }
 
-  @include vp-1199 {
-    background-image: url("../img/weight-plates@1x.png"), linear-gradient($ghost-white 90%, $color-default-white 90%);
-    background-size: 407px 442px;
-    background-position: 116% 101%;
-  }
+    @include retina {
+      background-image: url("../img/weight-plates@2x.png");
 
-  @include vp-767 {
-    background-image: none;
+      @supports (background-image: url("../img/weight-plates@2x.webp")) {
+        background-image: url("../img/weight-plates@2x.webp");
+      }
+    }
+
+    @include vp-1199 {
+      background-size: 403px 442px;
+      background-position: -29px -19px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
   }
 }
 
@@ -34,22 +44,22 @@
   width: 1180px;
   max-width: 100%;
   padding-top: 122px;
-  padding-bottom: 169px;
+  padding-bottom: 80px;
 
   @include vp-1199 {
     padding-top: 100px;
-    padding-bottom: 160px;
+    padding-bottom: 60px;
   }
 
   @include vp-767 {
-    padding-top: 63px;
-    padding-bottom: 33px;
+    padding-top: 65px;
+    padding-bottom: 30px;
   }
 }
 
 .subscription__title {
   margin-top: 0;
-  margin-bottom: 9px;
+  margin-bottom: 7px;
   font-family: $ff-alumni-sans;
   font-style: normal;
   font-weight: 600;
@@ -60,6 +70,7 @@
 
   @include vp-1199 {
     margin-left: -14px;
+    margin-bottom: 11px;
     font-size: 42px;
     line-height: 50px;
   }
@@ -76,7 +87,7 @@
   display: flex;
   justify-content: space-between;
   width: 29.3%;
-  margin-bottom: 29px;
+  margin-bottom: 38px;
   border-bottom: 2px solid $tabs-container-border;
 
   @include vp-1199 {
@@ -101,6 +112,11 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 
   &--active {
     color: $sapphire;
@@ -113,13 +129,14 @@
   }
 
   @include vp-767 {
-    padding-bottom: 14px;
+    padding-bottom: 13px;
     font-size: 16px;
     line-height: 24px;
   }
 }
 
 .subscription__list {
+  position: relative;
   width: 100%;
   display: none;
   grid-template-columns: repeat(3, 1fr);
@@ -128,6 +145,7 @@
   margin: 0;
   margin-bottom: 40px;
   list-style-type: none;
+  z-index: 1;
 
   &--active {
     display: grid;
@@ -149,7 +167,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 360px;
-  padding: 62px 70px;
+  padding: 55px 70px 63px;
   font-family: $ff-roboto-condensed;
   background-color: $color-default-white;
   border-width: 7px;
@@ -159,12 +177,12 @@
   @include vp-1199 {
     width: 100%;
     max-width: 442px;
-    padding: 55px 110px 60px;
+    padding: 55px 111px 65px;
   }
 
   @include vp-767 {
     max-width: 100%;
-    padding: 42px 34px 46px;
+    padding: 42px 34px 50px;
   }
 
   &:hover,
@@ -174,6 +192,13 @@
   }
 }
 
+.subscription__card:hover .subscription__card-link,
+.subscription__card:focus .subscription__card-link {
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  outline: none;
+  opacity: 1;
+}
+
 .subscription__card-title {
   margin: 0;
   margin-bottom: 11px;
@@ -181,7 +206,12 @@
   font-size: 26px;
   line-height: 29px;
 
+  @include vp-1199 {
+    margin-bottom: 8px;
+  }
+
   @include vp-767 {
+    margin-bottom: 9px;
     font-size: 22px;
     line-height: 24px;
   }
@@ -212,9 +242,13 @@
   color: $egyptian-blue;
   z-index: 1;
 
+  @include vp-1199 {
+    margin-bottom: 36px;
+  }
+
   @include vp-767 {
     margin-left: 9px;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
     font-size: 48px;
     line-height: 72px;
   }
@@ -292,11 +326,10 @@
   text-transform: uppercase;
   color: $sapphire;
   background-color: transparent;
-  border: 2px solid $sapphire;
+  outline: 2px solid $sapphire;
 
   @include hover-focus {
     background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
-    border: none;
     outline: none;
     opacity: 1;
   }
