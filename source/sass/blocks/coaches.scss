@@ -52,6 +52,10 @@
     background: rgba(16, 38, 84, 0.89);
   }
 
+  &:focus {
+    background: rgba(16, 38, 84, 0.89);
+  }
+
   @include vp-1199 {
     height: 38.5vw;
     padding: 53px 46px 22px 38px;
@@ -67,7 +71,8 @@
   }
 }
 
-.coaches__card:hover .coaches__card-text-container {
+.coaches__card:hover .coaches__card-text-container,
+.coaches__card:focus .coaches__card-text-container {
   justify-content: start;
 }
 
@@ -81,7 +86,9 @@
 }
 
 .coaches__card:hover .coaches__card-text,
-.coaches__card:hover .coaches__list {
+.coaches__card:focus .coaches__card-text,
+.coaches__card:hover .coaches__list,
+.coaches__card:focus .coaches__list {
   display: block;
 }
 
