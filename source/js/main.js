@@ -1,6 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import './vendor/swiper';
 import './modules/gym-video-launch';
 import './modules/subscription-tabs';
 import './modules/coaches-slider';
