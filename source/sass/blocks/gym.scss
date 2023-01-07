@@ -193,32 +193,32 @@
     right: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(rgba(20, 54, 122, 0.5)), url("../img/gym-video-preview@1x.jpg");
+    background-image: linear-gradient(#14367a80), url("../img/gym-video-preview@1x.jpg");
 
     @supports (background-image: url("../img/gym-video-preview@1x.webp")) {
-      background-image: linear-gradient(rgba(20, 54, 122, 0.5)), url("../img/gym-video-preview@1x.webp");
+      background-image: linear-gradient(#14367a80), url("../img/gym-video-preview@1x.webp");
     }
 
     @include retina {
-      background-image: linear-gradient(rgba(20, 54, 122, 0.5)), url("../img/gym-video-preview@2x.jpg");
+      background-image: linear-gradient(#14367a80), url("../img/gym-video-preview@2x.jpg");
 
       @supports (background-image: url("../img/gym-video-preview@2x.webp")) {
-        background-image: linear-gradient(rgba(20, 54, 122, 0.5)), url("../img/gym-video-preview@2x.webp");
+        background-image: linear-gradient(#14367a80), url("../img/gym-video-preview@2x.webp");
       }
     }
 
     @include vp-767 {
-      background-image: linear-gradient(rgba(20, 54, 122, 0.5)), url("../img/gym-video-preview-mobile@1x.jpg");
+      background-image: linear-gradient(#14367a80), url("../img/gym-video-preview-mobile@1x.jpg");
 
       @supports (background-image: url("../img/gym-video-preview-mibile@1x.webp")) {
-        background-image: linear-gradient(rgba(20, 54, 122, 0.5)), url("../img/gym-video-preview-mobile@1x.webp");
+        background-image: linear-gradient(#14367a80), url("../img/gym-video-preview-mobile@1x.webp");
       }
 
       @include retina {
-        background-image: linear-gradient(rgba(20, 54, 122, 0.5)), url("../img/gym-video-preview-mobile@2x.jpg");
+        background-image: linear-gradient(#14367a80), url("../img/gym-video-preview-mobile@2x.jpg");
 
         @supports (background-image: url("../img/gym-video-preview-mobile@2x.webp")) {
-          background-image: linear-gradient(rgba(20, 54, 122, 0.5)), url("../img/gym-video-preview-mobile@2x.webp");
+          background-image: linear-gradient(#14367a80), url("../img/gym-video-preview-mobile@2x.webp");
         }
       }
     }
@@ -227,6 +227,7 @@
 
 .gym__video {
   width: 100%;
+  border: none;
 
   @include vp-1199 {
     height: 21.9vw;

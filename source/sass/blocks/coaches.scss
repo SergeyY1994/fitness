@@ -49,11 +49,11 @@
   padding: 53px 46px 22px 45px;
 
   &:hover {
-    background: rgba(16, 38, 84, 0.89);
+    background: #102654e3;
   }
 
   &:focus {
-    background: rgba(16, 38, 84, 0.89);
+    background: #102654e3;
   }
 
   @include vp-1199 {
