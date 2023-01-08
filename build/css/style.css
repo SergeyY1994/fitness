@@ -2810,13 +2810,13 @@ button,
 }
 @media (max-width: 1199px) {
   .coaches__card {
-    height: 38.5vw;
+    height: 38.6vw;
     padding: 53px 46px 22px 38px;
   }
 }
 @media (max-width: 767px) {
   .coaches__card {
-    height: 85.4vw;
+    height: 86vw;
     padding: 42px 13px 28px 13px;
   }
 }
@@ -2941,6 +2941,19 @@ button,
   top: 52%;
   width: 16px;
   height: 32px;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+@media (hover: hover) {
+  .coaches__swiper-button-prev:hover:not(.focus-visible),
+.coaches__swiper-button-next:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+}
+.coaches__swiper-button-prev.focus-visible:focus,
+.coaches__swiper-button-next.focus-visible:focus {
+  opacity: 0.8;
 }
 @media (max-width: 767px) {
   .coaches__swiper-button-prev,
@@ -3691,6 +3704,22 @@ button,
   }
 }
 
+.reviews__swiper-button-prev,
+.reviews__swiper-button-next {
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+@media (hover: hover) {
+  .reviews__swiper-button-prev:hover:not(.focus-visible),
+.reviews__swiper-button-next:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+}
+.reviews__swiper-button-prev.focus-visible:focus,
+.reviews__swiper-button-next.focus-visible:focus {
+  opacity: 0.8;
+}
 .reviews__swiper-button-prev::after,
 .reviews__swiper-button-next::after {
   display: none;
@@ -3850,7 +3879,6 @@ button,
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #74819c;
-  cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;

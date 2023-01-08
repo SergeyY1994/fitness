@@ -126,6 +126,12 @@
 
 .reviews__swiper-button-prev,
 .reviews__swiper-button-next {
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
   &::after {
     display: none;
   }

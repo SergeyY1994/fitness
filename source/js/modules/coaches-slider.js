@@ -14,11 +14,11 @@ if (coachesSlider) {
         slidesPerView: 1,
         spaceBetween: 0,
       },
-      768: {
+      767: {
         slidesPerView: 2,
         spaceBetween: 30,
       },
-      1200: {
+      1199: {
         slidesPerView: 4,
         spaceBetween: 40,
       },
