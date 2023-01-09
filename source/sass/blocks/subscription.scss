@@ -89,6 +89,7 @@
   width: 29.3%;
   margin-bottom: 38px;
   border-bottom: 2px solid $tabs-container-border;
+  user-select: none;
 
   @include vp-1199 {
     width: 49%;
@@ -327,6 +328,7 @@
   color: $sapphire;
   background-color: transparent;
   outline: 2px solid $sapphire;
+  user-select: none;
 
   @include hover-focus {
     background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);

@@ -251,6 +251,7 @@
   border-radius: 50%;
   transition: opacity $trans-default;
   cursor: pointer;
+  user-select: none;
 
   @include vp-1199 {
     top: 28%;

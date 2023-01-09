@@ -10,11 +10,11 @@
 
   @include vp-1199 {
     width: 100%;
-    padding: 20px 101px 100px;
+    padding: 21px 101px 100px;
   }
 
   @include vp-767 {
-    padding: 18px 47px 70px;
+    padding: 18px 47px 68px;
   }
 }
 
@@ -57,12 +57,13 @@
   }
 
   @include vp-1199 {
-    height: 38.6vw;
+    height: auto;
+    aspect-ratio: 0.91 / 1;
     padding: 53px 46px 22px 38px;
   }
 
   @include vp-767 {
-    height: 86vw;
+    aspect-ratio: 0.82 / 1;
     padding: 42px 13px 28px 13px;
   }
 

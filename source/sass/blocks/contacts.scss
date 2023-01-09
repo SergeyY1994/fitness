@@ -135,6 +135,7 @@
   border: 3px solid $color-default-white;
   cursor: pointer;
   transition: opacity $trans-default;
+  user-select: none;
 
   @include hover-focus {
     opacity: 0.8;
