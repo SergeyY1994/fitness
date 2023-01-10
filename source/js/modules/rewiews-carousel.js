@@ -2,6 +2,7 @@ import Swiper from '../vendor/swiper';
 const reviewsSlider = document.querySelector('.reviews__swiper');
 
 if (reviewsSlider) {
+  // eslint-disable-next-line
   let swiper = new Swiper(reviewsSlider, {
     direction: 'horizontal',
     slidesPerView: 1,

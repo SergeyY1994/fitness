@@ -2,6 +2,7 @@ import Swiper from '../vendor/swiper';
 const coachesSlider = document.querySelector('.coaches__swiper');
 
 if (coachesSlider) {
+  // eslint-disable-next-line
   let swiper = new Swiper(coachesSlider, {
     direction: 'horizontal',
     loop: true,
