@@ -3629,6 +3629,16 @@ button,
   color: #ffffff;
   border-color: #ffffff;
 }
+@media (max-width: 1199px) {
+  .activity__link--big-item {
+    max-width: 220px;
+  }
+}
+@media (max-width: 767px) {
+  .activity__link--big-item {
+    max-width: none;
+  }
+}
 @media (hover: hover) {
   .activity__link:hover:not(.focus-visible) {
     opacity: 0.8;
