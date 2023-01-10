@@ -109,6 +109,7 @@
   background-image: url("../img/gym@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $whisper;
 
   @supports (background-image: url("../img/gym@1x.webp")) {
     background-image: url("../img/gym@1x.webp");

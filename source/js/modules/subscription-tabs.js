@@ -1,7 +1,7 @@
 let tabButtonNodeList = document.querySelectorAll('.subscription__tab-button');
 let subscriptionListNodeList = document.querySelectorAll('.subscription__list');
 
-if (tabButtonNodeList && subscriptionListNodeList) {
+if (tabButtonNodeList.length !== 0 && subscriptionListNodeList.length !== 0 && tabButtonNodeList.length === subscriptionListNodeList.length) {
   tabButtonNodeList[0].classList.add('subscription__tab-button--active');
 
   for (let element of subscriptionListNodeList) {

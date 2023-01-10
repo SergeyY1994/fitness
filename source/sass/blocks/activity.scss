@@ -79,26 +79,57 @@
   }
 
   &--big {
+    position: relative;
     min-height: 462px;
     padding: 32px 57% 45px 45px;
     grid-row: 1 / 3;
     color: $color-default-white;
     background-color: $torch-red;
-    background-image: url("../img/activity-athlete@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: right 0;
-    background-size: auto 100%;
     border: none;
 
-    @supports (background-image: url("../img/activity-athlete@1x.webp")) {
-      background-image: url("../img/activity-athlete@1x.webp");
-    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -1px;
+      height: 100%;
+      width: calc(100% - 278px);
+      background-repeat: no-repeat;
+      background-image: url("../img/activity-athlete@1x.jpg");
+      background-position: center;
+      background-size: cover;
 
-    @include retina {
-      background-image: url("../img/activity-athlete@2x.jpg");
 
-      @supports (background-image: url("../img/activity-athlete@2x.webp")) {
-        background-image: url("../img/activity-athlete@2x.webp");
+      @supports (background-image: url("../img/activity-athlete@1x.webp")) {
+        background-image: url("../img/activity-athlete@1x.webp");
+      }
+
+      @include retina {
+        background-image: url("../img/activity-athlete@2x.jpg");
+
+        @supports (background-image: url("../img/activity-athlete@2x.webp")) {
+          background-image: url("../img/activity-athlete@2x.webp");
+        }
+      }
+
+      @include vp-1199 {
+        background-image: url("../img/activity-athlete-tablet@1x.jpg");
+
+        @supports (background-image: url("../img/activity-athlete-tablet@1x.webp")) {
+          background-image: url("../img/activity-athlete-tablet@1x.webp");
+        }
+
+        @include retina {
+          background-image: url("../img/activity-athlete-tablet@2x.jpg");
+
+          @supports (background-image: url("../img/activity-athlete-tablet@2x.webp")) {
+            background-image: url("../img/activity-athlete-tablet@2x.webp");
+          }
+        }
+      }
+
+      @include vp-767 {
+        display: none;
       }
     }
 
@@ -106,27 +137,14 @@
       min-height: 60vw;
       grid-row: auto;
       grid-column: 1 / 3;
-      padding: 32px 59% 45px 45px;
-      background-size: contain;
-      background-image: url("../img/activity-athlete-tablet@1x.jpg");
-
-      @supports (background-image: url("../img/activity-athlete-tablet@1x.webp")) {
-        background-image: url("../img/activity-athlete-tablet@1x.webp");
-      }
-
-      @include retina {
-        background-image: url("../img/activity-athlete-tablet@2x.jpg");
-
-        @supports (background-image: url("../img/activity-athlete-tablet@2x.webp")) {
-          background-image: url("../img/activity-athlete-tablet@2x.webp");
-        }
-      }
+      padding: 32px 65% 45px 45px;
     }
 
     @include vp-767 {
       min-height: 187vw;
       grid-column: auto;
       padding: 35px 45px 119% 45px;
+      background-repeat: no-repeat;
       background-position: bottom;
       background-size: contain;
 
@@ -157,7 +175,12 @@
   &--item-big {
     font-size: 28px;
 
+    @include vp-1199 {
+      max-width: 220px;
+    }
+
     @include vp-767 {
+      max-width: none;
       margin-bottom: -4px;
     }
   }
@@ -184,6 +207,14 @@
     margin-top: -2px;
     font-size: 18px;
     line-height: 25px;
+
+    @include vp-1199 {
+      max-width: 220px;
+    }
+
+    @include vp-767 {
+      max-width: none;
+    }
   }
 
   &--smaller-width {
