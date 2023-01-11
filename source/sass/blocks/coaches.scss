@@ -67,10 +67,6 @@
     background: #102654e3;
   }
 
-  &:focus {
-    background: #102654e3;
-  }
-
   @media (max-width: 1300px) {
     height: 261px;
     padding: 53px 40px 22px;
@@ -92,8 +88,20 @@
   }
 }
 
-.coaches__card:hover .coaches__card-text-container,
-.coaches__card:focus .coaches__card-text-container {
+.coaches:focus-within .swiper-slide-active {
+  background: #102654e3;
+}
+
+.coaches:focus-within .swiper-slide-active .coaches__card-text-container {
+  justify-content: start;
+}
+
+.coaches:focus-within .swiper-slide-active .coaches__card-text,
+.coaches:focus-within .swiper-slide-active .coaches__list {
+  display: block;
+}
+
+.coaches__card:hover .coaches__card-text-container {
   justify-content: start;
 }
 
@@ -107,9 +115,7 @@
 }
 
 .coaches__card:hover .coaches__card-text,
-.coaches__card:focus .coaches__card-text,
-.coaches__card:hover .coaches__list,
-.coaches__card:focus .coaches__list {
+.coaches__card:hover .coaches__list {
   display: block;
 }
 

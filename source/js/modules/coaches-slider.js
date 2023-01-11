@@ -30,10 +30,4 @@ if (coachesSlider) {
       prevEl: '.coaches__swiper-button-prev',
     },
   });
-
-  const swiperSlideDublicates = document.querySelectorAll('.swiper-slide-duplicate');
-
-  for (let element of swiperSlideDublicates) {
-    element.removeAttribute('tabIndex');
-  }
 }

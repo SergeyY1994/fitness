@@ -2908,9 +2908,6 @@ button,
 .coaches__card:hover {
   background: rgba(16, 38, 84, 0.8901960784);
 }
-.coaches__card:focus {
-  background: rgba(16, 38, 84, 0.8901960784);
-}
 @media (max-width: 1300px) {
   .coaches__card {
     height: 261px;
@@ -2934,8 +2931,22 @@ button,
   overflow: hidden;
 }
 
-.coaches__card:hover .coaches__card-text-container,
-.coaches__card:focus .coaches__card-text-container {
+.coaches:focus-within .swiper-slide-active {
+  background: rgba(16, 38, 84, 0.8901960784);
+}
+
+.coaches:focus-within .swiper-slide-active .coaches__card-text-container {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.coaches:focus-within .swiper-slide-active .coaches__card-text,
+.coaches:focus-within .swiper-slide-active .coaches__list {
+  display: block;
+}
+
+.coaches__card:hover .coaches__card-text-container {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
@@ -2960,9 +2971,7 @@ button,
 }
 
 .coaches__card:hover .coaches__card-text,
-.coaches__card:focus .coaches__card-text,
-.coaches__card:hover .coaches__list,
-.coaches__card:focus .coaches__list {
+.coaches__card:hover .coaches__list {
   display: block;
 }
 
