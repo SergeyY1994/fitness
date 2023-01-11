@@ -4,6 +4,7 @@ import './modules/gym-video-launch';
 import './modules/subscription-tabs';
 import './modules/coaches-slider';
 import './modules/rewiews-carousel';
+import './modules/form-tel-mask.js';
 
 // ---------------------------------
 

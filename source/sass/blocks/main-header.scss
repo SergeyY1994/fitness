@@ -51,16 +51,32 @@
 
 .main-header__list {
   display: flex;
-  flex-wrap: wrap;
+  max-height: 535px;
+  max-width: 155px;
+  flex-direction: column;
   margin: 0;
   padding-left: 0;
   list-style-type: none;
   z-index: 1;
+  overflow-y: auto;
+
+  @include vp-1199 {
+    max-width: none;
+    max-height: 30px;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .main-header__item {
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-bottom: 10px;
+
+    @include vp-1199 {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
   }
 }
 

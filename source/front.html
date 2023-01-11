@@ -380,7 +380,7 @@
               </div>
               <div class="swiper reviews__swiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide reviews__slide" tabindex="0">
+                  <div class="swiper-slide reviews__slide">
                     <picture>
                       <source srcset="img/client-1-avatar@1x.webp 1x, img/client-1-avatar@2x.webp 2x" type="image/webp">
                       <img class="reviews__client-avatar" src="img/client-1-avatar@1x.jpg" srcset="img/client-1-avatar@2x.jpg 2x"  width="80" height="80" loading="lazy" alt="Анна Орлова.">
@@ -388,7 +388,7 @@
                       <h3 class="reviews__client-name">Анна Орлова</h3>
                       <p class="reviews__client-review">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
                   </div>
-                  <div class="swiper-slide reviews__slide" tabindex="0">
+                  <div class="swiper-slide reviews__slide">
                     <picture>
                       <source srcset="img/client-1-avatar@1x.webp 1x, img/client-1-avatar@2x.webp 2x" type="image/webp">
                       <img class="reviews__client-avatar" src="img/client-1-avatar@1x.jpg" srcset="img/client-1-avatar@2x.jpg 2x" width="80" height="80" loading="lazy" alt="Орлова Анна.">
@@ -417,7 +417,7 @@
                 </div>
                 <div class="contacts__form-field">
                   <label class="visually-hidden" for="user-phone">Телефон</label>
-                  <input type="text" id="user-phone" name="user-phone" minlength="11" pattern="^[- +()0-9]+$" placeholder="Телефон" required>
+                  <input type="text" id="user-phone" name="user-phone" pattern="^[- +()0-9]+$" data-phone-pattern data-phone-clear="false" placeholder="Телефон" required>
                 </div>
                 <div class="contacts__form-field contacts__form-field--button">
                   <button type="submit">Отправить</button>
@@ -437,11 +437,11 @@
                 </div>
                 <div class="contacts__item contacts__item--3">
                   <dt class="contacts__item-title">Телефон:</dt>
-                  <dd class="contacts__information"><a class="contacts__link" href="tel:88005555555">8-800-555-55-55</a></dd>
+                  <dd class="contacts__information contacts__information--tel"><a class="contacts__link" href="tel:88005555555">8-800-555-55-55</a></dd>
                 </div>
                 <div class="contacts__item contacts__item--4">
                   <dt class="contacts__item-title">Email:</dt>
-                  <dd class="contacts__information"><a class="contacts__link" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></dd>
+                  <dd class="contacts__information contacts__information--email"><a class="contacts__link" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></dd>
                 </div>
               </dl>
             </div>

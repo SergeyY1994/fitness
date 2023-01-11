@@ -262,6 +262,12 @@
   font-size: 14px;
   line-height: 21px;
 
+  &--tel,
+  &--email {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
   @include vp-1199 {
     font-size: 18px;
     line-height: 27px;

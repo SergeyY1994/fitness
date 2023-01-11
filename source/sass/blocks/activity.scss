@@ -60,6 +60,7 @@
 .activity__item {
   display: flex;
   flex-direction: column;
+  min-height: 211px;
   padding: 13px 28px 28px;
   font-family: $ff-roboto-condensed;
   color: $resolution-blue;
@@ -68,7 +69,6 @@
   border-image-slice: 1;
 
   @include vp-1199 {
-    min-height: 211px;
     padding: 15px 29px 28px 28px;
   }
 
@@ -96,7 +96,6 @@
       width: calc(100% - 278px);
       background-repeat: no-repeat;
       background-image: url("../img/activity-athlete@1x.jpg");
-      background-position: center;
       background-size: cover;
 
 
@@ -128,6 +127,10 @@
         }
       }
 
+      @include vp-1199 {
+        width: 59%;
+      }
+
       @include vp-767 {
         display: none;
       }
@@ -141,7 +144,7 @@
     }
 
     @include vp-767 {
-      min-height: 187vw;
+      min-height: 598px;
       grid-column: auto;
       padding: 35px 45px 119% 45px;
       background-repeat: no-repeat;
@@ -204,15 +207,19 @@
   line-height: 22px;
 
   &--item-big {
+    max-height: 200px;
     margin-top: -2px;
     font-size: 18px;
     line-height: 25px;
+    overflow-y: auto;
 
     @include vp-1199 {
+      max-height: 29vw;
       max-width: 220px;
     }
 
     @include vp-767 {
+      max-height: none;
       max-width: none;
     }
   }
