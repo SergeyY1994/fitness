@@ -1513,8 +1513,10 @@ button,
   .main-block__wrapper {
     max-width: 100%;
     width: 100%;
-    -ms-grid-columns: 32% 68%;
-    grid-template-columns: 32% 68%;
+    -ms-grid-columns: 1fr -webkit-min-content;
+    -ms-grid-columns: 1fr min-content;
+    grid-template-columns: 1fr -webkit-min-content;
+    grid-template-columns: 1fr min-content;
   }
 }
 
@@ -1533,8 +1535,10 @@ button,
 }
 @media (max-width: 767px) {
   .main-block__text-container {
+    -ms-grid-column-align: end;
+        justify-self: end;
     margin-top: 118px;
-    margin-right: -20px;
+    margin-right: -13px;
   }
 }
 
@@ -1735,7 +1739,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   max-height: 535px;
-  max-width: 155px;
+  max-width: 200px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1748,17 +1752,22 @@ button,
 }
 @media (max-width: 1199px) {
   .main-header__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (-webkit-max-content)[3];
+    -ms-grid-columns: (max-content)[3];
+    grid-template-columns: repeat(3, -webkit-max-content);
+    grid-template-columns: repeat(3, max-content);
     max-width: none;
-    max-height: 30px;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  .main-header__list {
+    max-height: 99px;
+    -ms-grid-columns: (-webkit-max-content)[2];
+    -ms-grid-columns: (max-content)[2];
+    grid-template-columns: repeat(2, -webkit-max-content);
+    grid-template-columns: repeat(2, max-content);
   }
 }
 
@@ -2253,9 +2262,12 @@ button,
 }
 
 .subscription__tabs-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (-webkit-max-content)[3];
+  -ms-grid-columns: (max-content)[3];
+  grid-template-columns: repeat(3, -webkit-max-content);
+  grid-template-columns: repeat(3, max-content);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2872,6 +2884,22 @@ button,
   }
 }
 
+.coaches__swiper-container {
+  position: relative;
+}
+@media (max-width: 1300px) {
+  .coaches__swiper-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1199px) {
+  .coaches__swiper-container {
+    width: 100%;
+  }
+}
+
 .coaches__card {
   position: relative;
   height: 294px;
@@ -2882,6 +2910,12 @@ button,
 }
 .coaches__card:focus {
   background: rgba(16, 38, 84, 0.8901960784);
+}
+@media (max-width: 1300px) {
+  .coaches__card {
+    height: 261px;
+    padding: 53px 40px 22px;
+  }
 }
 @media (max-width: 1199px) {
   .coaches__card {
@@ -3010,7 +3044,7 @@ button,
 
 .coaches__swiper-button-prev,
 .coaches__swiper-button-next {
-  top: 54%;
+  top: 52%;
   width: 16px;
   height: 32px;
   -webkit-transition: opacity 0.3s ease;
@@ -3047,7 +3081,7 @@ button,
 }
 
 .coaches__swiper-button-prev {
-  left: 46px;
+  left: -58px;
 }
 @media (max-width: 767px) {
   .coaches__swiper-button-prev {
@@ -3056,7 +3090,7 @@ button,
 }
 
 .coaches__swiper-button-next {
-  right: 46px;
+  right: -58px;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -3925,24 +3959,21 @@ button,
 
 .contacts__form-section {
   color: #ffffff;
-  padding-right: 167px;
+  padding-right: 170px;
 }
 @media (max-width: 1199px) {
   .contacts__form-section {
     width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding-top: 61px;
-    padding-left: 134px;
-    padding-right: 162px;
-    padding-bottom: 69px;
+    margin-left: calc(50% - 51vw);
+    padding: 61px 154px 69px 141px;
     background-color: #102654;
   }
 }
 @media (max-width: 767px) {
   .contacts__form-section {
     padding-top: 64px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 17px;
+    padding-right: 11px;
   }
 }
 

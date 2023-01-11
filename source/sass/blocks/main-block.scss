@@ -45,7 +45,7 @@
   @include vp-767 {
     max-width: 100%;
     width: 100%;
-    grid-template-columns: 32% 68%;
+    grid-template-columns: 1fr min-content;
   }
 }
 
@@ -62,8 +62,9 @@
   }
 
   @include vp-767 {
+    justify-self: end;
     margin-top: 118px;
-    margin-right: -20px;
+    margin-right: -13px;
   }
 }
 
