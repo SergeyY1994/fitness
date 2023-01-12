@@ -135,6 +135,7 @@
   line-height: 27px;
 
   @include vp-1199 {
+    width: fit-content;
     font-size: 12px;
     line-height: 18px;
   }
@@ -153,7 +154,7 @@
       bottom: -4px;
 
       @include vp-1199 {
-        right: 13px;
+        right: -17px;
         bottom: -2px;
       }
     }
@@ -163,6 +164,10 @@
     &::after {
       right: 2px;
       bottom: -5px;
+
+      @include vp-1199 {
+        right: -24px;
+      }
     }
   }
 }
