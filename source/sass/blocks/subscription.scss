@@ -94,13 +94,15 @@
   user-select: none;
 
   @include vp-1199 {
-    width: 49%;
+    width: auto;
+    max-width: 49%;
     column-gap: 54px;
     margin-bottom: 46px;
   }
 
   @include vp-767 {
-    width: 100%;
+    width: auto;
+    max-width: none;
     column-gap: 45px;
     margin-bottom: 33px;
   }

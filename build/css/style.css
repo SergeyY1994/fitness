@@ -2283,7 +2283,8 @@ button,
 }
 @media (max-width: 1199px) {
   .subscription__tabs-container {
-    width: 49%;
+    width: auto;
+    max-width: 49%;
     -webkit-column-gap: 54px;
        -moz-column-gap: 54px;
             column-gap: 54px;
@@ -2292,7 +2293,8 @@ button,
 }
 @media (max-width: 767px) {
   .subscription__tabs-container {
-    width: 100%;
+    width: auto;
+    max-width: none;
     -webkit-column-gap: 45px;
        -moz-column-gap: 45px;
             column-gap: 45px;
